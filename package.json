@@ -3,9 +3,6 @@
   "version": "0.6.4",
   "description": "gRPC wrapper for the Google Assistant",
   "main": "index.js",
-  "scripts": {
-    "postinstall": "./node_modules/.bin/electron-rebuild"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bugsounet/google-assistant.git"
@@ -14,21 +11,13 @@
     "google assistant"
   ],
   "author": "Scott Ysebert <endoplasmic@gmail.com>",
-  "contributors": [
-    {
-      "name": "Carlos Knoke Flores",
-      "email": "carlos@knoke.net"
-    }
-  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bugsounet/google-assistant/issues"
   },
   "homepage": "https://github.com/bugsounet/google-assistant#readme",
   "dependencies": {
-    "electron-rebuild": "^1.11.0",
     "google-auth-library": "0.10.0",
-    "grpc": "1.23.4",
     "mkdirp": "^0.5.1",
     "open": "^6.4.0",
     "protobufjs": "^6.8.8",
