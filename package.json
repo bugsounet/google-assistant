@@ -4,7 +4,8 @@
   "description": "gRPC wrapper for the Google Assistant",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/.bin/electron-rebuild"
   },
   "repository": {
     "type": "git",
@@ -26,15 +27,12 @@
   },
   "homepage": "https://github.com/endoplasmic/google-assistant#readme",
   "dependencies": {
+    "electron-rebuild": "^1.11.0",
     "google-auth-library": "0.10.0",
-    "grpc": "^1.24.2",
+    "grpc": "1.23.4",
     "mkdirp": "^0.5.1",
     "open": "^6.4.0",
     "protobufjs": "^6.8.8",
     "readline": "^1.3.0"
-  },
-  "devDependencies": {
-    "node-record-lpcm16": "git+https://github.com/endoplasmic/node-record-lpcm16.git",
-    "speaker": "^0.4.2"
   }
 }
