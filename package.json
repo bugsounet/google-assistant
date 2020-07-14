@@ -1,15 +1,14 @@
 {
-  "name": "google-assistant",
+  "name": "@bugsounet/google-assistant",
   "version": "0.6.4",
   "description": "gRPC wrapper for the Google Assistant",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "./node_modules/.bin/electron-rebuild"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://endoplasmic@github.com/endoplasmic/google-assistant.git"
+    "url": "https://github.com/bugsounet/google-assistant.git"
   },
   "keywords": [
     "google assistant"
@@ -23,9 +22,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/endoplasmic/google-assistant/issues"
+    "url": "https://github.com/bugsounet/google-assistant/issues"
   },
-  "homepage": "https://github.com/endoplasmic/google-assistant#readme",
+  "homepage": "https://github.com/bugsounet/google-assistant#readme",
   "dependencies": {
     "electron-rebuild": "^1.11.0",
     "google-auth-library": "0.10.0",
