@@ -1,6 +1,6 @@
 {
-  "name": "@bugsounet/assistant",
-  "version": "0.0.1",
+  "name": "@bugsounet/google-assistant",
+  "version": "1.0.0",
   "description": "gRPC wrapper for the Google Assistant",
   "main": "index.js",
   "repository": {
