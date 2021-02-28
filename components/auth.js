@@ -15,11 +15,11 @@ function Auth(config) {
 
   // make sure we have a key file to read from
   if (config.keyFilePath === undefined) {
-    throw new Error('Missing "keyFilePath" from config (should be where your JSON file is)');
+    throw new Error('[GA] Missing "keyFilePath" from config (should be where your JSON file is)');
   }
 
   if (config.savedTokensPath === undefined) {
-    throw new Error('Missing "savedTokensPath" from config (this is where your OAuth2 access tokens will be saved)');
+    throw new Error('[GA] Missing "savedTokensPath" from config (this is where your OAuth2 access tokens will be saved)');
     return;
   }
 
@@ -45,11 +45,11 @@ function Auth(config) {
     });
 
     // open the URL
-    console.log('Opening OAuth URL. Return here with your code.');
+    console.log('[GA] Opening OAuth URL. Return here with your code.');
     open(url).catch(() => {
-      console.log('Failed to automatically open the URL. Copy/paste this in your browser:\n', url);
+      console.log('[GA] Failed to automatically open the URL\n');
     });
-
+    console.log("[GA] If your browser will not open, you can copy/paste this URL:\n", url);
     // if tokenInput is configured
     // run the tokenInput function to accept the token code
     if (typeof config.tokenInput === 'function') {
@@ -64,7 +64,7 @@ function Auth(config) {
       terminal: false,
     });
 
-    reader.question('Paste your code: ', processTokens);
+    reader.question('[GA] Paste your code: ', processTokens);
   };
 
   const processTokens = (oauthCode) => {
@@ -73,7 +73,7 @@ function Auth(config) {
     // get our tokens to save
     oauthClient.getToken(oauthCode, (error, tkns) => {
       // if we didn't have an error, save the tokens
-      if (error) throw new Error('Error getting tokens:', error);
+      if (error) throw new Error('[GA] Error getting tokens:', error);
 
       tokens = tkns;
       saveTokens();
